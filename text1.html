@@ -1,0 +1,90 @@
+<html>
+    <head>
+        <title>Приветствие 2014</title>
+        <meta charset="UTF-8">
+        <style type="text/css" rel="StyleSheet">
+            .gblock{width:350px; font-size:14px;border:solid 1px #000000;font-family: verdana, sans;}
+            .gtitle{background:#284352; color:#ffffff;}
+            #tb{width:348px;padding:2px;}
+            .texttyt{background:red;width:342px; font-size:14px; padding:2px; color:#ffffff;}
+                        
+                        .block {display: none;}
+        </style>
+        <script>
+                    function changeContent() {
+                        rot = 0;
+                    
+                        var allBlock = document.getElementById('tb').getElementsByClassName('block');
+                        var loadImg = document.getElementById('load');
+                        var x = 0;
+                        
+                        for (i = 0; i < allBlock.length; i++) {
+                        
+                            if (allBlock[i].style.display == 'block' && i < (allBlock.length-1)) {
+                                var x = 1;
+                                allBlock[i].style.display = 'none';
+                                loadImg.style.display = 'block';
+                                var timer = setInterval(rotateImg, 100);
+                                setTimeout(function() {
+                                    loadImg.style.display = 'none';
+                                    allBlock[i+1].style.display = 'block';
+                                    clearInterval(timer);
+                                }, 2000);
+                                x = 1;
+                                return;
+                                
+                            } else if (allBlock[allBlock.length-1].style.display == 'block') {
+                                    var x = 1;
+                                    allBlock[allBlock.length-1].style.display = 'none';
+                                    loadImg.style.display = 'block';
+                                    var timer = setInterval(rotateImg, 100);
+                                    setTimeout(function() {
+                                        loadImg.style.display = 'none';
+                                        allBlock[0].style.display = 'block';
+                                        clearInterval(timer);
+                                    }, 2000);
+                                    x = 1;
+                                    return;
+                                
+                            } else if (i == allBlock.length-1 && x == 0) {
+                                    loadImg.style.display = 'block';
+                                    var timer = setInterval(rotateImg, 100);
+                                    setTimeout(function() {
+                                        loadImg.style.display = 'none';
+                                        allBlock[0].style.display = 'block';
+                                        clearInterval(timer);
+                                    }, 2000);
+                            }
+                        }
+                    }
+                    
+                    function rotateImg() {
+                        rot = rot + 45;
+                        document.getElementById('load').style.WebkitTransform = 'rotate('+rot+'deg)';
+                    }
+        </script>
+    </head>
+    <body>
+            <div class="gblock">
+                <div class="gtitle">
+                    Блок с приветсвием
+                </div>
+                <div>
+                     <center><input type="button" id="button" onclick="changeContent()" value="Нажми"></center>
+                </div>
+                <div id="tb">
+                    <center><img id="load" style="display: none;" src="http://savepic.net/4081526.jpg"></center><br/>
+                    <div class="block">
+                    1
+                    </div>
+                    <div class="block">
+                    2
+                    </div>
+                    <div class="block">
+                    3
+                    </div>
+                    
+                </div>
+            </div>  
+    </body>
+</html>

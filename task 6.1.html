@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+
+  <head>
+	<style>
+div[data-status='done'] span{
+      text-decoration:line-through;
+    }
+	</style>
+   
+  </head>
+
+
+  <body>
+    <div id="tasks">
+      <div>
+        <button onclick="f1()">Finish</button>
+        <span id="main1" >Finish web tasks</span>
+      </div>
+      <div><button onclick="f2()">Finish</button><span id="main2">Go to gym</span></div>
+      <div><button onclick="f3()">Finish</button><span id="main3">Clean home</span></div>
+      <div><button onclick="f4()">Finish</button><span  id="main4">Start project</span></div>
+      <div><button onclick="f5()">Finish</button><span id="main5">Prepare to calculus</span></div>
+    </div>
+    <script>
+      var d=0;
+      function f1(){
+        var a = document.getElementById("main1");
+        if(d==0){
+        a.style.textDecoration = "line-through";
+        d=1;}
+        else{
+          a.style.textDecoration="none";
+          d=0;
+        }
+        return;
+      }
+      function f2(){
+        var a = document.getElementById("main2");
+        if(d==0){
+        a.style.textDecoration = "line-through";
+        d=1;}
+        else{
+          a.style.textDecoration="none";
+          d=0;
+        }
+        return;
+      }
+      function f3(){
+        var a = document.getElementById("main3");
+        if(d==0){
+        a.style.textDecoration = "line-through";
+        d=1;}
+        else{
+          a.style.textDecoration="none";
+          d=0;
+        }
+        return;
+      }
+      function f4(){
+        var a = document.getElementById("main4");
+        if(d==0){
+        a.style.textDecoration = "line-through";
+        d=1;}
+        else{
+          a.style.textDecoration="none";
+          d=0;
+        }
+        return;
+      }
+      function f5(){
+        var a = document.getElementById("main5");
+        if(d==0){
+        a.style.textDecoration = "line-through";
+        d=1;}
+        else{
+          a.style.textDecoration="none";
+          d=0;
+        }
+        return;
+      }
+
+  </script>
+  </body>
+  
+
+</html>
