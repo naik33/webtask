@@ -19,7 +19,7 @@
 				<label for="menu-checkbox" class="toggle-button" data-open="Menu" data-close="CLOSE" onclick></label>
 				<ul class="main-menu">
 					<li><a href="#">Home</a></li>
-					<li><a href="#">Portfolio</a></li>
+					<li><a href="products.html">Products</a></li>
 					<li><a href="index.php">Sign up</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
@@ -118,5 +118,18 @@
   integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
   crossorigin="anonymous"></script>
 	<script src="script.js"></script>
+	<script>
+		
+let garden={
+	"login":naik33,
+	"username":nurik,
+	"message":"You do not have permission",
+	"workers":[
+		"gardener",
+		"gatherer"
+	]
+}
+console.log(JSON.parse(JSON.stringify(garden)));
+	</script>
 </body>
 </html>
